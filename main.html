@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <img
+          src="https://i.pinimg.com/originals/d5/75/4a/d5754a8e1e329b5d39e8417135cfc11a.gif"
+        />
+        <h1>Will you be my valentine?</h1>
+        <div class="flex-row">
+          <button onclick="window.location.href='yes.html';" class="yesBtn">
+            Yes
+          </button>
+          <button id="noBtn" class="noBtn">No</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const button = document.getElementById("noBtn");
+
+      button.addEventListener("mouseover", () => {
+        const maxX = window.innerWidth - button.clientWidth;
+        const maxY = window.innerHeight - button.clientHeight;
+
+        const newX = Math.floor(Math.random() * maxX);
+        const newY = Math.floor(Math.random() * maxY);
+
+        button.style.left = `${newX}px`;
+        button.style.top = `${newY}px`;
+      });
+    </script>
+  </body>
+</html>
